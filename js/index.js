@@ -32,7 +32,7 @@ const displaynews = (newses) => {
     
         <div class="flex 
     //   bg-[#F3F3F5] rounded-2xl p-2 lg:p-10 sm:gap-5 mb-5">
-            <div class="w-[10%]">
+            <div class="w-auto">
                 <div class="avatar  placeholder ">
                 <div class="w-[20%] rounded-full absolute ">${isActive}
                 </div>
@@ -94,7 +94,7 @@ const displayNewPost =(newPosts)=>{
         let posted_date =``
     
     const newPostCard = document.createElement('div')
-    newPostCard.classList='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'
+    newPostCard.classList='m-auto grid  lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'
        newPostCard.innerHTML=`<div class="card w-96 gap-6 bg-base-100 shadow-xl">
        <figure class="px-10 pt-10">
            <img src="${newse.cover_image}" alt="Shoes"
