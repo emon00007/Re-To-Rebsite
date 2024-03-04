@@ -23,10 +23,11 @@ const displaynews = (newses) => {
         }
         
 
-        console.log(news)
+        // console.log(news)
         
         const NewsCard = document.createElement('div')
         // NewsCard.classList=` `
+
         NewsCard.innerHTML = `
     
         <div class="flex 
@@ -88,7 +89,10 @@ displayNewPost(newPosts)
 const displayNewPost =(newPosts)=>{
     const newPostContainer =document.getElementById('new-post-container')
     newPosts.forEach(newse=>{
-        // console.log(newse)
+    
+        console.log(newse)
+        let posted_date =``
+    
     const newPostCard = document.createElement('div')
     newPostCard.classList='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1'
        newPostCard.innerHTML=`<div class="card w-96 gap-6 bg-base-100 shadow-xl">
@@ -99,7 +103,7 @@ const displayNewPost =(newPosts)=>{
        <div class="card-body items-start text-start">
            <div class="flex">
                <img src="image/calenderr.svg" alt="">
-               <p>${newse.author.posted_date}</p>
+               <p>${newse.author.posted_date ||"No publish date"}</p>
            </div>
            <h2 class="card-title">${newse.title}</h2>
            <p>${newse.description} </p>
@@ -110,8 +114,8 @@ const displayNewPost =(newPosts)=>{
            </div>
          </div>
                <div>
-                   <h2 class="text-xl font-medium">${newse.author.name}</h2>
-                   <p>${newse.author.designation}</p>
+                   <h2 class="text-xl font-medium">${newse.author.name }</h2>
+                   <p>${newse.author.designation  ||"Unknown"}</p>
                </div>
            </div>
        </div>
